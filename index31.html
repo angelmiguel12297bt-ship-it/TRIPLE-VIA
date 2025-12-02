@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRIPLE VÍA - Profesional</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #0c0c0c;
+      color: #e0e0e0;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      transition: background 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 10px transparent;
+    }
+
+    header.scrolled {
+      background: #222;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+    }
+
+    header img {
+      max-width: 220px;
+      transition: transform 0.3s;
+    }
+
+    header img:hover {
+      transform: scale(1.05);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px 0;
+      background: #161616;
+      position: fixed;
+      width: 100%;
+      top: 80px;
+      left: 0;
+      z-index: 999;
+      border-bottom: 1px solid #333;
+    }
+
+    nav a {
+      color: #f5c542;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, text-shadow 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+      text-shadow: 0 0 5px #f5c542;
+    }
+
+    section {
+      padding: 120px 20px 60px 20px;
+      max-width: 900px;
+      margin: 0 auto 30px auto;
+      background: #0d0d0d;
+      border-radius: 10px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1, h2 {
+      color: #f5c542;
+      text-align: center;
+    }
+
+    .fotos {
+      display: flex;
+      overflow-x: auto;
+      gap: 15px;
+      padding-bottom: 10px;
+    }
+
+    .fotos img {
+      width: 250px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    .fotos img:hover {
+      transform: scale(1.05);
+    }
+
+    #topBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 18px;
+      font-size: 16px;
+      background: #f5c542;
+      color: #111;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1000;
+      transition: background 0.3s;
+    }
+
+    #topBtn:hover {
+      background: #fff;
+    }
+
+    footer {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      border-top: 1px solid #333;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 20px;
+      border-radius: 10px;
+      outline: none;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        top: 70px;
+      }
+      header img {
+        max-width: 180px;
+      }
+      .fotos img {
+        width: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="header">
+    <img src="LOGO TRIPLE VIA PHOTOSHOP 2.png" alt="Logo Triple Vía" />
+  </header>
+
+  <!-- Navegación -->
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Quiénes Somos</a>
+    <a href="#integrantes">Integrantes</a>
+    <a href="#galeria">Galería</a>
+    <a href="#repertorio">Repertorio</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <!-- Secciones -->
+  <section id="inicio">
+    <h1>Bienvenidos a TRIPLE VÍA</h1>
+    <p>La agrupación familiar que combina talento, historia y energía en cada presentación.</p>
+    <audio controls>
+      <source src="musica-ejemplo.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio.
+    </audio>
+  </section>
+
+  <section id="nosotros">
+    <h2>Quiénes Somos</h2>
+    <p>Aquí agregaremos la historia y presentación del grupo.</p>
+  </section>
+
+  <section id="integrantes">
+    <h2>Integrantes</h2>
+    <p>Sección para fotos y descripción de cada miembro.</p>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería</h2>
+    <div class="fotos">
+      <img src="fotopapa.jpg" alt="Foto 1">
+      <img src="fotomicky.jpg" alt="Foto 2">
+      <img src="fotohugo.jpg" alt="Foto 3">
+      <img src="foto4.jpg" alt="Foto 4">
+    </div>
+  </section>
+
+  <section id="repertorio">
+    <h2>Repertorio</h2>
+    <p>Lista de géneros y canciones interpretadas.</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Contrataciones: 71572190 - 73521999</p>
+  </section>
+
+  <!-- Botón volver arriba -->
+  <button id="topBtn">↑ Arriba</button>
+
+  <!-- Footer -->
+  <footer>
+    © TRIPLE VÍA - Todos los derechos reservados
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Scroll suave
+    const links = document.querySelectorAll('nav a');
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Header efecto scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Botón volver arriba
+    const topBtn = document.getElementById('topBtn');
+    window.addEventListener('scroll', () => {
+      topBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+    });
+    topBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Animación secciones al hacer scroll
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    // Slider simple horizontal en galería (scroll con flechas opcional)
+    const fotosContainer = document.querySelector('.fotos');
+    let isDown = false, startX, scrollLeft;
+
+    fotosContainer.addEventListener('mousedown', (e) => {
+      isDown = true;
+      fotosContainer.classList.add('active');
+      startX = e.pageX - fotosContainer.offsetLeft;
+      scrollLeft = fotosContainer.scrollLeft;
+    });
+    fotosContainer.addEventListener('mouseleave', () => isDown = false);
+    fotosContainer.addEventListener('mouseup', () => isDown = false);
+    fotosContainer.addEventListener('mousemove', (e) => {
+      if(!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - fotosContainer.offsetLeft;
+      const walk = (x - startX) * 2;
+      fotosContainer.scrollLeft = scrollLeft - walk;
+    });
+  </script>
+</body>
+</html>
