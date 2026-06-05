@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    position: relative;
+}
+.logo img {
+    width: 250px;
+    height: auto;
+    display: flex;
+    border-radius: 10px;
+    filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.8));
+    position: relative;
+    z-index: 100;
+    transition: transform 0.5s ease;
+}
+.logo img:hover {
+    transform: translateY(20px) scale(1.3);
+}
+.navbar {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    height: 170px;
+}
+.navbar a{
+    color: gold;
+    text-shadow:
+        0 0 5px gold,
+        0 0 10px gold,
+        0 0 20px orange;
+}
+.navbar a:hover{
+    text-shadow:
+        0 0 5px #00ffff,
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #00ffff;
+
+    transform: scale(1.1);
+}
+body {
+    background-color: rgb(17, 15, 15);
+    background-image: url(LOGO\ TRIPLE\ VIA\ PHOTOSHOP\ 2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
+.nav-links-derecha, .nav-links-izquierda {
+    list-style: none;
+    display: flex;
+    padding-left: 10px;
+    gap: 20px;
+    color: beige;
+}
+.nav-links-derecha > li {
+    position: relative;
+}
+.nav-links-izquierda > li {
+    position: relative;
+}
+.nav-links-derecha a {
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+}
+.nav-links-izquierda a {
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+}
+.slider{
+    overflow: hidden;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    height: 360px;
+    padding-top: 5px;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(3px);
+}
+.track{
+            display: flex;
+            gap: 20px;
+            animation: mover 20s linear infinite;
+            width: max-content;
+        }
+        .card{
+            min-width: 250px;
+            flex-shrink: 0;
+        }
+        .card img{
+            width: 250px;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 10%;
+            filter: drop-shadow(0 0 10px black);
+            padding-top: 10px;
+        }
+        @keyframes mover{
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(-50%);
+            }
+        }
+        h3{
+            color: beige;
+            text-align: center;
+            text-shadow: 2px 2px 5px black;
+
+        }
+        body{
+            background-color: rgb(19, 18, 18);
+        }
+        #logo{
+            width: 300px;
+            height: auto;
+            justify-content: center;
+            padding-top: 60px;
+        }
+article{
+    text-align: center;
+}
+#yo{
+    width: 400px;
+    height: auto;
+}
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: indianred;
+    text-shadow: 2px 4px black;
+}
+p {
+    text-align: center;
+    font-family: cursive; 
+    font-style: oblique italic;
+    font-size: 20px;
+    color: blanchedalmond;
+    text-shadow: 2px 4px black;}
+.card img:hover{
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+/*
+.menu-desplegable {
+    list-style: none;
+}
+.menu-desplegable {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #7a7e7e;
+    min-width: 150px;
+    list-style: none;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+}
+.menu-desplegable a{
+    color: rgb(3, 3, 3);
+    padding: 15px;
+}
+.desplegable:hover .menu-desplegable {
+    opacity:1;
+    visibility: visible;
+}
+.nav-links > li a:hover {
+	color:beige;
+}
+#yo {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 40% 60% 65% 35% / 40% 35% 65% 60%;
+    border: dashed 5px black;
+}
+#yo:hover {
+    transform: scale(1.4);
+}
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: indianred;
+    text-shadow: 2px 4px black;
+}
+p {
+    text-align: center;
+    font-family: cursive; 
+    font-style: oblique italic;
+    font-size: 20px;
+    color: blanchedalmond;
+    text-shadow: 2px 4px black;
+} */
